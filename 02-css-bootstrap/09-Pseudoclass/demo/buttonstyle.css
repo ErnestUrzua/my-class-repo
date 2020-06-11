@@ -13,8 +13,9 @@ a {
     over the preceding element.
 */
 a:hover {
-  background-color: red;
-  color: green;
+  background-color:blueviolet;
+  color: fuchsia;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /* Focus Pseudo Class
@@ -35,4 +36,9 @@ a:focus {
 a:active {
   background-color: black;
   color: white;
+}
+
+a:disabled {
+  background-color: gray;
+  color: lightgray;
 }
