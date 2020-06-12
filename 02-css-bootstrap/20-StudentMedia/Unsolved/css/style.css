@@ -62,11 +62,18 @@ body {
   /* The body's bg color will be #333 */
   body {
     background-color: #333;
+    font-size: x-large;
+    font-style: italic;
+    background-image: url(https://images.unsplash.com/photo-1497752531616-c3afd9760a11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+    background-position: center;
+    overflow: hidden;
+    ;
   }
 
   /* The wrapper's width will be 600px */
   .wrapper {
     width: 600px;
+    visibility: hidden;
   }
 }
 
