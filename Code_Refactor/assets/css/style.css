@@ -24,7 +24,8 @@ header {
 
 
 /* darkened the color for better contrast, accessibility */
-header h1 .seo {
+/* renamed header h1 to h1  */
+h1 .seo {
     color: #001f63;
 }
 
@@ -49,9 +50,14 @@ header nav ul li {
     margin-left: 25px;
 }
 
+/* added underline for visual focus */
 a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: underline
+}
+
+a:hover {
+    color: #001f63;
 }
 
 p {
@@ -235,6 +241,6 @@ h8 {
     text-align: center;
 }
 
-.footer h2 {
+.footer h8 {
     font-size: 20px;
 }
