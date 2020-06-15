@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Conditional Demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      // Here we create our prompt and confirm variables which will store user input.
+      var eatSteak = confirm("Do you Vegan steak?");
+      var birthYear = prompt("What is your birthyear?");
+      //var sushiType = prompt("What kind of sushi do you like?");
+
+      // if user likes vegan steak
+      if (eatSteak) {
+        alert("Heres a Tofu Steak!");
+      }
+
+      //  if they dont like tofu steak then offer stirfry
+      else {
+        document.write("Heres a Tofu stir fry then!");
+      }
+
+      //if birthyear is greater than or equal to 2000
+      if (birthYear >= 2000) {
+        alert("Have some Sake!");
+      }
+      // if birth year is less than year 2000, then print no sake 
+      else if (birthdate) {
+        alert("No Sake for you!!");
+      }
+
+      
+
+    </script>
+
+  </body>
+</html>
