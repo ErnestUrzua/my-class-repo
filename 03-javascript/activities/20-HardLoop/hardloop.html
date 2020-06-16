@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+  </head>
+  <body>
+
+    <h1>Look at console</h1>
+
+    <script>
+      // array of farm animals
+    var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+      // Looping through each item in the array and logging a message to the console.
+      for (var i = 0; i < myFarm.length; i++) {
+        var x = myFarm[i];
+       var firstLetter = x.charAt(0);
+         if (firstLetter === "c" || firstLetter === "o" ){
+          alert(x + " starts with c or o")
+         }
+          else{
+            //do nothing
+          }
+
+      }
+
+      console.log = "second loop";
+
+      for (var i = 0; i < 1; i++) {
+        console.log=('I am 0');
+        console.log=('I am 1');
+        console.log=('I am 2');
+        
+      }
+  
+    </script>
+    
+  </body>
+</html>
