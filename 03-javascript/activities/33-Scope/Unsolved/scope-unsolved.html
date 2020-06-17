@@ -19,31 +19,33 @@
       console.log(message + name + " is " + age + ".");
     }
 
-    // ???
+    // Oh my! Peleke is 92.
     firstFunction("Oh my! ");
 
     function secondFunction(name) {
       console.log(name + " is " + age + ".");
     }
 
-    // ???
+    // Oh my! Jullius is 92
     secondFunction("Julius");
 
     // Write a function that returns: name + " is " + age + ".",
     // It should use the value of name defined above, but
     // shadow the age value.
-    function thirdFunction() {
-      // ???
+    function thirdFunction(name) {
+      console.log(name + " is " + age + ".");
     }
 
+    thirdFunction("Ernie");
     // Log the return value of thirdFunction.
     // BONUS: Do this without a variable assignment.
 
     // CHALLENGE: Write a function that takes a string argument, and prints it.
-    function report(/* ??? */) {
-      // ???
+    function report(string) {
+        console.log(string);
     }
 
+    report("Ernie is cool");
     // Next, research forEach, and use the report function
     // to print the values in the languages array defined
     // above.
