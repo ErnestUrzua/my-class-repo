@@ -40,29 +40,47 @@
       // ================================================================================
 
       // Add in the lines of code below necessary to call the functions we created above.
-
+      function adder(x,y,z) {
+        var sum = (x+y+z);
+        console.log(sum);
+      }
+      adder(1,2,4);
 
       // Call the adder function here.
-
-
-      console.log("-------------------");
-
-
+      // Create a Function called "adder" that take three arguments (x, y, z).
+      // The function should add the arguments together, and log the result to the console.
+      function multiplier(x,y,z){
+        var sum = (x*y*z);
+        console.log(sum)
+      }
+      
       // Call the multiplier function here.
+      multiplier(1,2,4);
 
-
-      console.log("-------------------");
+      
 
 
       // Call the isString function here.
+      function isString(s){
+        var x = (typeof(s));
+        if (x === 'string') {
+          console.log(s + " is a string");
+        }
+
+        else {
+          console.log(s + " is not string");
+        }
+        
+      }
+
+     isString("yolo");
+     isString(12);
 
 
-      console.log("-------------------");
-
-
-      // Call the vowelChecker function here.
-
-
+      // Call the vowelChecker 
+      function vowelChecker(x){
+        
+      }
       console.log("-------------------");
 
 
