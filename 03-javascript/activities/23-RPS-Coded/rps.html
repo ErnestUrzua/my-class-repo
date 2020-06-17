@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+        // Variables
+        var tie = 0;
+        var win = 0;
+        var lose = 0;
+        var choice = ["r", "p", "s"];
+
+        
+        // If Choices: 
+        for (var i = 0; i < 10; i++) {
+            var userChoice = prompt("Please pick a choice: r, p, or s!");
+            console.log("p1 picked" + userChoice);
+            // Generate a random decimal number between 0 and 1
+            var x = Math.floor(Math.random() * 3);
+            console.log("p2 picked " + choice[x]);
+            p2 = choice[x];
+            if (userChoice === "r" && p2 === "s" || userChoice === r)  {
+                alert("You won!");
+                win++;
+            } else {}
+            if (userChoice === "r" && p2 === "p") {
+                alert("You lost!");
+                lose++;
+            } else {}
+            if (userChoice === "r" && p2 === "r") {
+                alert("You tied!");
+                tie++;
+            } else {}
+            if (userChoice === "s" && p2 === "p") {
+                alert("You won!");
+                win++;
+            } else {}
+            if (userChoice === "s" && p2 === "p") {
+                alert("You won!");
+                win++;
+            } else {}
+            if (userChoice === "s" && p2 === "s") {
+                alert("You tied!");
+                tie++;
+            } else {}
+            if (userChoice === "p" && p2 === "r") {
+                alert("You won!");
+                win++;
+            } else {}
+            if (userChoice === "p" && p2 === "s") {
+                alert("You lost!");
+                lose++;
+            } else {}
+            if (userChoice === "p" && p2 === "p") {
+                alert("You tied!");
+                tie++;
+            } else {}
+        }
+    </script>
+</body>
+</html>
