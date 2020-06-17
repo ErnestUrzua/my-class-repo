@@ -11,7 +11,7 @@
       // VARIABLES
       // ==========================================================================
       var letter;
-
+      var h = 0;//counts how manytime press h
       var car = {
         make: "Honda",
         model: "Fit",
@@ -68,6 +68,8 @@
         // TO DO: Call the different car methods
         if (letter === "h"){
           car.honk();
+          h++;
+          console.log(h);
         }
         
         if (letter === "d"){
