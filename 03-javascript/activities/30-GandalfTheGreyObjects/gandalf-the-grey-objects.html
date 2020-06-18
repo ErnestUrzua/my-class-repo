@@ -11,23 +11,23 @@
     var gandalf = {
       "real name": "Gandalf",
       "age (est)": 11000,
-      "race": "Maia",
-      "haveRetirementPlan": true,
-      "aliases": [
+      race: "Maia",
+      haveRetirementPlan: true,
+      aliases: [
         "Greyhame",
         "Stormcrow",
         "Mithrandir",
         "Gandalf the Grey",
         "Gandalf the White"
       ],
-      "favoriteSong": {
+      favoriteSong: {
         "name": "The Road Goes Ever On",
         "artist": "Bilbo Baggins" 
       }
     };
 
     // Object properties can be accessed with "bracket notation"
-   // alert("My name is " + gandalf["real name"]);
+    alert("My name is " + gandalf["real name"]);
 
     // Or with "dot notation" if the property has no spaces
     if (gandalf.haveRetirementPlan) {
@@ -35,45 +35,36 @@
       // Or with a variable that matches the name of the property
       var ageProperty = "age (est)";
       var years = gandalf[ageProperty];
-      //alert("My 401k has been gathering interest for " + years + " years!");
+      alert("My 401k has been gathering interest for " + years + " years!");
     }
 
     // You can access arrays and their properties from an object
-    //alert("I have more than " + gandalf.aliases.length + " aliases");
+    alert("I have more than " + gandalf.aliases.length + " aliases");
 
     // Non-existent properties return undefined
-    //alert("My designation is " + gandalf["designation"]);
+    alert("My designation is " + gandalf["designation"]);
 
     // Objects can also contain other objects, whose properties can be accessed by chaining dot notation
-    //alert("My favorite song was written by " + gandalf.favoriteSong.artist);
+    alert("My favorite song was written by " + gandalf.favoriteSong.artist);
 
     // Or with bracket notation
-    //alert("My favorite song is " + gandalf["favoriteSong"]["name"]);
+    alert("My favorite song is " + gandalf["favoriteSong"]["name"]);
 
     var baby = {
       name: "Asher",
-      age: 1,
+      age: 2,
       "is cute": true,
-      isLoud: true,
+      "isLoud": true,
       toys: ["truck", "ball", "Mr. Squiggles"],
       books: ["Pout Pout Fish", "The Adventures of John Muir", "The feelings Book"]
     }
 
+    console.log(baby.isLoud)
+
     console.log("Name: " + baby.name);
     baby.food = "apples";
+    baby.food = "apples";
     baby.name = "Asher the Great";
-
-    var Ernie = {
-      name: ["neto", "Ernest", "Skonka"],
-      food: ["ramen", "more ramen","even more ramen"],
-      funFacts: ["loves subwoofers", "loves records","VEGAN","Animal Lover"]
-    }
-    alert("My names are " + Ernie.name);
-    console.log("name: " + Ernie.name + Ernie.food + Ernie.funFacts);
-    
-    alert("my fav foods are " + Ernie.food)
-
-    alert("Some fun facts about me are " + Ernie.funFacts)
   </script>
 </body>
 

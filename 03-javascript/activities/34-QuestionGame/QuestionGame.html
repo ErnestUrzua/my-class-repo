@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+    // gloabl variables
+    var score = 0;
+    
+    // array of questions and answers
+    // var quanda = [{ 
+    //   "questions":[{
+    //     q1: "Is air real", a: "true" },
+    //   { q: "Is farley real", a: "true" }, 
+    //   { q: "Are cats the best", a: "false" }, 
+    //   { q: "Are dogs the best", a: "false" } ]
+      
+    // }
+
+    var questions = [
+      {q: "Is air real", a: true},
+      {q: "is Farley Real?", a : true},
+      {q: "ar Cats the best", a: true}
+    ]
+    for (var i =0;i<questions.length;i++){
+      var response = confirm(questions[i].q);
+      
+      if (response === questions[i].a) {
+        score++;
+      alert( "Correct: You have " + score + "/" + questions.length)
+    }
+    
+  
+  }
+
+    
+    
+    
+    
+    
+    
+      
+
+    // ask users questions with alerts
+    // for (x=0;x<quanda.length;x++)
+    //   alert.confirm(quanda[x]);
+    //   alert.prompt(quanda[x][x] + "is the answer")
+
+    </script>
+
+  </body>
+</html>
