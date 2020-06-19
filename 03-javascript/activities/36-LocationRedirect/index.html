@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Window Scope</title>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p id = "demo">
+    Since this can compromise privacy, the position is not available unless the user approves it.
+    </p>
+    <script>
+      //find user os and create an alert
+      var OSName="Unknown OS";
+      if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+      if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+      if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+      if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+      alert('Your OS: '+OSName);
+      
+
+      var x = document.getElementById("demo");
+      function getLocation() {
+      if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }   
+  }
+}
+
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+      }
+
+     
+      var x = navigator.geolocation.getCurrentPosition(showPosition);
+      alert("your location is " + x);
+      console.log("your location is " + x);
+
+      //redirect a user
+      // var url = "https://www.google.com"; 
+      // window.location = url; 
+
+
+    </script>
+  </body>
+</html>
