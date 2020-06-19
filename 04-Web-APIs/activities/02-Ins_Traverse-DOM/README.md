@@ -23,7 +23,7 @@
 
   console.log(document.body.children[3]);
 
-  console.log(document.body.children[1].childNodes[3].childNodes[1].style.color = "red")
+  console.log(document.body.children[1].childNodes[3].childNodes[1].style.color = "red");
 
   
   ```
