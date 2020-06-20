@@ -6,6 +6,7 @@ var modalNameEl = document.querySelector("#modal-name");
 var descriptionEl = document.querySelector("#description");
 var closeEl = document.querySelector(".close");
 var saveBtn = document.querySelector("#save");
+var editEl = document.querySelector("#id");
 
 var people = [{ name: "Bob" }];
 var currentId = 0;
@@ -15,9 +16,13 @@ function addPersonToList(event) {
   var name = nameEl.value;
   var li = document.createElement("li");
   li.id = people.length;
-  li.innerHTML = name + " <button>edit</button>";
+  li.innerHTML = name + "<button>edit</button>";
   people.push({ name: name });
   peopleListEl.append(li);
+}
+
+function open(){
+modalEl.style.display = "contents";
 }
 
 function close() {
@@ -26,7 +31,9 @@ function close() {
 
 function handleClick() {
   // Use event delegation to handle when the user clicks "edit"
+  modalEl.style.display = "contents";
 }
 
+editEl.addEventListener("click",open);
 closeEl.addEventListener("click", close);
 addBtn.addEventListener("click", addPersonToList);

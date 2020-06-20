@@ -2,9 +2,10 @@ var eventType = document.querySelector("#event-type");
 var mouseEventsEl = document.querySelector("#click-events");
 var keyEventsEl = document.querySelector("#key-events");
 
+
 function toggleDisplay(event) {
   var value = event.target.value;
-  if(value === "keydown") {
+  if(value === "onchange") {
     mouseEventsEl.classList.add("hide");
     keyEventsEl.classList.remove("hide");
   }
