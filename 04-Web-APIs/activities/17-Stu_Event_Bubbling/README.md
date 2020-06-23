@@ -1,4 +1,4 @@
-# Event Bubbling
+ # Event Bubbling
 
 In this activity, we are going to create an image carousel that allows us to cycle through images. 
 

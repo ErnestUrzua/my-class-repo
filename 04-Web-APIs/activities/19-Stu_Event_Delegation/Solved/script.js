@@ -49,7 +49,9 @@ saveBtn.addEventListener("click", function(event) {
 });
 
 addBtn.addEventListener("click", addPersonToList);
+
 peopleListEl.addEventListener("click", handleClick);
+
 document.addEventListener("click", function(event) {
   if (event.target === modalEl) {
     close();

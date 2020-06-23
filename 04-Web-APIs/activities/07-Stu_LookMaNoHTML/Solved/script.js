@@ -29,18 +29,18 @@ li3.textContent = "Burgers";
 li4.textContent = "Sushi";
 
 // Append all of our elements
-// body.appendChild(h1El);
-// body.appendChild(h2El);
-// body.appendChild(infoEl);
-// infoEl.appendChild(imgEl);
-// infoEl.appendChild(kittenEl);
-// infoEl.appendChild(nameEl);
-// body.appendChild(favoriteEl);
-// favoriteEl.appendChild(listEl);
-// listEl.appendChild(li1);
-// listEl.appendChild(li2);
-// listEl.appendChild(li3);
-// listEl.appendChild(li4);
+body.appendChild(h1El);
+body.appendChild(h2El);
+body.appendChild(infoEl);
+infoEl.appendChild(imgEl);
+infoEl.appendChild(kittenEl);
+infoEl.appendChild(nameEl);
+body.appendChild(favoriteEl);
+favoriteEl.appendChild(listEl);
+listEl.appendChild(li1);
+listEl.appendChild(li2);
+listEl.appendChild(li3);
+listEl.appendChild(li4);
 
 // Style all of our elements
 h1El.setAttribute("style", "margin:auto; width:50%; text-align:center;");
