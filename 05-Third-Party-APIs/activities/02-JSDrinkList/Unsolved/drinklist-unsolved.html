@@ -29,7 +29,18 @@
 
     // 1. Create code that "grabs" the div with the matching id (#drink-options);
     // ...
-
+    
+    var drinkoptionsEl = document.querySelector("#drink-options");
+      // for (var i=0;i<drinkList.length;i++) {
+      //   var ptag = document.createElement("p");
+      //   ptag.textContent= drinkList[i];
+      //   drinkoptionsEl.appendChild(ptag);
+      // }
+        drinkList.forEach((element) => {
+            var ptag = document.createElement("p");
+            ptag.textContent = element;
+            drinkoptionsEl.appendChild(ptag);
+          });
 
     // ...
 
