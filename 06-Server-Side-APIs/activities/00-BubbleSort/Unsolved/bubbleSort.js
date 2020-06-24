@@ -8,17 +8,21 @@
 // use Google to read up on the concept.
 // Spend about 10 minutes pseudocoding your solution before writing any JavaScript.
 
+
 // Use the array provided below.
 
+
 // Display the unsorted array in the `#start` div of `index.html`.
+var displayEl = document.querySelector("start");
 
 // When the user clicks the `button` in index.html,
-// the sorted result should be displayed in the `#result` div.
+var buttonEl = document.querySelector("go");//pointer
+//buttonEl.addEventListener("click", bubbleSort());
+
+// the sortedy result should be displayed in the `#result` div.
 
 // DO NOT USE JQUERY TO SELECT ELEMENTS. ONLY USE VANILLA JS.
-
-
-var unsortedArr = [
+var array = [
   1, 326, 251, 24, 284, 364, 287, 74, 89,
   63, 455, 130, 408, 378, 333, 49, 69, 335,
   195, 145, 122, 454, 30, 277, 208, 293, 311,
@@ -68,6 +72,34 @@ var unsortedArr = [
   181, 485, 495, 81, 169, 294, 79, 400, 92, 104, 249
 ];
 
+
+function bubbleSort(array) {
+  //take unsortedArr[0] and compare to [1] 
+  //if [0]>[1] swap
+  var isSorted = false;
+
+  //use boolean flag to determin if its sorted
+  while (isSorted === false) {
+    for (var i = 0; i < array.length - 1; i++) {
+      
+      //console.log(array[i]);
+
+      if (array[i] > array[i + 1]) {
+        //swap
+        var temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+        isSorted = true;
+      }
+      else {
+        isSorted = false;
+      }
+    }
+  }
+  //console.log(array);
+};
+
+bubbleSort(array);
 
 
 
