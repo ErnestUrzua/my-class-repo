@@ -25,13 +25,15 @@
     // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
     // It's useful to become familiar with now.
 
-    $(document).ready(function() {
+    $(document).ready(function () {
 
       // VARIABLES
       // ====================================================================
       // Here we create variables for tracking the number of sandwiches eaten
       // ...
-
+      var pbjCount = 0;
+      var grilledcheeseCount = 0;
+      var roastbeefCount = 0;
 
       // ...
 
@@ -40,13 +42,37 @@
       // Here we create various on "click" functions which capture the clicks
       // Inside each click event is the code to create an alert, update the counter, then show the updated count.
       // ...
+      $(document).ready(function () {
 
+        // Here we use jQuery to select the header with "click-me" as its ID.
+        // Notice I have the #click-me, click, and then the function
+        // So $("#id|.class|element").on("action", function(){});
+        // And so whenever it is clicked...
+        $("#pbj").on("click", function () {
+          
+          pbjCount++;
+          alert("you have eaten" +  " pbj " + pbjCount + " grilled cheese " + grilledcheeseCount + " roast beef " + roastbeefCount);
+        });
+        $("#grilledcheese").on("click", function () {
+          
+          grilledcheeseCount++;
+          alert("you have eaten" +  " pbj " + pbjCount + " grilled cheese " + grilledcheeseCount + " roast beef " + roastbeefCount);
+        });
+        $("#roastbeef").on("click", function () {
+          
+          roastbeefCount++;
+          alert("you have eaten" +  " pbj " + pbjCount + " grilled cheese " + grilledcheeseCount + " roast beef " + roastbeefCount);
+        });
+
+        
+
+      });
 
       // ...
 
     });
 
-</script>
+  </script>
 
 </body>
 
