@@ -77,26 +77,22 @@ function bubbleSort(array) {
   //take unsortedArr[0] and compare to [1] 
   //if [0]>[1] swap
   var isSorted = false;
-
   //use boolean flag to determin if its sorted
   while (isSorted === false) {
+    isSorted = true;
     for (var i = 0; i < array.length - 1; i++) {
-      
-      //console.log(array[i]);
-
+        
       if (array[i] > array[i + 1]) {
         //swap
         var temp = array[i];
         array[i] = array[i + 1];
         array[i + 1] = temp;
-        isSorted = true;
-      }
-      else {
         isSorted = false;
       }
+      
     }
   }
-  //console.log(array);
+  console.log(array);
 };
 
 bubbleSort(array);
