@@ -47,7 +47,12 @@
       var title = response.Title;
       var year = response.Year;
 
+      var Trow = $("<tr>");
       // Create and save a reference to new empty table row
+     
+      //$(".table").append("<tr>" + year + "</tr>");
+      Trow.append($("tBody"));
+
       // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
       // Append the td elements to the new table row
       // Append the table row to the tbody element

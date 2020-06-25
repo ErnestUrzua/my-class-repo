@@ -68,25 +68,17 @@
               console.log("You clicked a button!!");
 
               // Add code to have the computer guess a random number between 1 and 4
-              var randomNumber = Math.floor(Math.random()*4)+1;
-              $("#computer-pick").text(randomNumber);
               // Then determine which button was clicked
-
               // Compare the computer and user guess
               // Inform the user if the've guessed correctly or incorrectly
               // console.log("You clicked a button!!");
+              console.log(this.value);
               console.log(this);
+              console.log("******");
               console.log($(this).text());
               console.log($(this).val());
-              console.log("****************************************")
-              console.log(this.value);
               var buttonValue = $(this).val();
-              if (buttonValue == randomNumber){
-                $("#result").html("<p>You are Correct!</p>");
-              }
-              else {
-                $("#result").html("<p>You are Wrong!</p>");
-              }
+
             });
           });
 

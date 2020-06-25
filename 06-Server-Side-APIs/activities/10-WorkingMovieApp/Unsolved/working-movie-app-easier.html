@@ -49,18 +49,24 @@
           url: queryURL,
           method: "GET"
         }).then(function(response) {
-
+          
           console.log(response);
-          // var title = response.Title;
+          var title = response.Title;
           console.log(title);
+
           var release = response.Released;
           var plot = response.Plot;
-          var rated = response.Rated;
-
+          var rated = response.Rated[0];
+          
           // Creates a div to hold the movie
+          var movie = $("<div>");
           // Retrieves the Rating Data
           // Creates an element to have the rating displayed
+          var obj = JSON.stringify(rated);
+          console.log(obj);
           // Displays the rating
+          $("#movies-view").append(movie + obj)
+            
           // Retrieves the release year
           // Creates an element to hold the release year
           // Displays the release year

@@ -22,10 +22,12 @@
       method: "GET"
     }).then(function(response) {
       console.log(response);
-
+      
       var gifs = response.data
       for (var i =0; i < gifs.length; i++){
         console.log(gifs[i].images.original.url);
+      var tRow = ("<tr>");
+      trow.append(gifs);
       }
     });
   </script>
