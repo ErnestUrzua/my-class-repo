@@ -22,10 +22,20 @@ var fs = require("fs");
 // and, 3. a callback.
 fs.readFile("data.csv", "utf8", function(error, data) {
 
+  fs.writeFile("data.csv",data,(err) =>) {
+
+  
   if (error) {
     return console.log(error);
   }
-
+  
   console.log(data);
 
+});
+
+
+fs.writeFile("data.csv", data, (err) => {
+
+  if (err) throw err;
+  console.log('The file has been saved!');
 });
