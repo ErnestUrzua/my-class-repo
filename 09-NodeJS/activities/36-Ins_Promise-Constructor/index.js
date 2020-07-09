@@ -19,31 +19,3 @@ readFileAsync("example.txt", "utf8")
   .catch(function(err) {
     console.log(err);
   });
-
-
-
-//---------------Callback Example
-
-function readFileCallBack(path, encoding, cb) {
-    fs.readFile(path, encoding, function(err, data) {
-      cb(err, data)
-    });
-  });
-}
-
-function myCallBack(isErr, results){
-   if (isErr) {
-        return console.log(err);
-    }
-
-    return results
-}
-
-
-console.log(readFileCallBack("example.txt", "utf8", myCallBack));
-
-
-
-
-
-

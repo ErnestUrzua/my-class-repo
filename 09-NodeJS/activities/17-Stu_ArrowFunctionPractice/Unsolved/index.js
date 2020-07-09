@@ -1,11 +1,12 @@
 // 1. funnyCase makes each letter in a string the opposite case as the one before
-var funnyCase = (string) => 
+var funnyCase = function(string) {
   var newString = "";
   for (var i = 0; i < string.length; i++) {
     if (i % 2 === 0) newString += string[i].toLowerCase();
     else newString += string[i].toUpperCase();
   }
-;
+  return newString;
+};
 
 // Prints `yOu cAn't jUsT Do wHaTeVeR YoU WaNt aLl tHe tImE!`
 console.log(funnyCase("You can't just do whatever you want all the time!"));
@@ -17,7 +18,7 @@ var map = function(arr, cb) {
   var result = [];
   for (var index = 0; index < arr.length; index++) {
     var currentElement = arr[index];
-    result.push(cb(currentElement, index));
+    result.push(cb(currentElement));
   }
   return result;
 };

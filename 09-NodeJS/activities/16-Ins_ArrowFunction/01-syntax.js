@@ -1,6 +1,6 @@
 // All of the `createGreeting` functions are equivalent
 var createGreeting = function(message, name) {
-  return message + ", " + name + "!";
+   return message + ", " + name + "!";
 };
 
 // We can safely swap out function expressions with arrow functions most of the time

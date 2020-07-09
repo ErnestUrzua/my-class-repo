@@ -9,7 +9,7 @@ var person = {
     // var that = this;
     setTimeout(function() {
       // console.log(that.name + "!");
-      console.log(this.name + "!");
+      console.log(this.name + "!!");//undefined!!
     }, 100);
   }
 };
@@ -23,7 +23,7 @@ var person = {
   name: "Hodor",
   saySomething: function() {
     console.log(this.name + " is thinking...");
-    setTimeout(() => console.log(this.name + "!"), 100);
+    setTimeout(() => console.log(this.name + "!"), 1000);
   }
 };
 

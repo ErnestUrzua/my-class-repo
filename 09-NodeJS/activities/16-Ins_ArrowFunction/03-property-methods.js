@@ -7,12 +7,12 @@ var dog = {
 };
 
 
-// var dog = {
-//   name: "Lassie",
-//   sound: "Woof!",
-//   makeSound: function(){  console.log(this.sound)},
-//   readTag: function(){  console.log("The dog's tag reads: " + this.name + ".")}
-// };
+var dog = {
+  name: "Lassie",
+  sound: "Woof!",
+  makeSound: function(){  console.log(this.sound)},
+  readTag: function(){  console.log("The dog's tag reads: " + this.name + ".")}
+};
 
 // Prints `undefined`
 dog.makeSound();

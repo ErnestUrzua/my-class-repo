@@ -8,7 +8,9 @@ console.log(add(1, 2, 3, 4, 5)); // => 3
 function add(...nums) {
   console.log(nums); //[1, 1, 4, 5]; for final call
   let sum = 0;
-  for (let num of nums) sum += num;
+  for (let num of nums) {
+    sum += num;
+  }
   return sum;
 }
 
@@ -23,7 +25,7 @@ function saySomething(arg1, arg2, ...allOther){
 	var two = arg2;
 	var restArray = allOther;
 }
-
+saySomething("jerome", "Asher", "Mr.snuggles", "Joe")
 
 // 2. 
 function howManyArgs(...args) {
@@ -65,7 +67,7 @@ console.log(secondArr);
 //   { name: 'Farley', nickname: 'Furball' },
 //   { name: 'Asher' },
 //   { name: 'Mr, Snugggles' },
-//   {name: "Jerome"}
+
 // ]
 
 secondArr.push({name: "Jerome"})
