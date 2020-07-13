@@ -1,5 +1,5 @@
 var fs = require("fs");
-var UserSearch = require("UserSearch.js");
+var UserSearch = require("../Unsolved/UserSearch.js");
 var moment = require("moment");
 
 var WeatherAdmin = function() {
@@ -18,8 +18,8 @@ var WeatherAdmin = function() {
       newUserSearch.location +
       " Date: " +
       moment(newUserSearch.date).format("MM-DD-YYYY");
-
-    fs.appendFile("log.txt", "utf-8", logTxt, (err) => {//need data to append
+      
+    fs.appendFile("log.txt", logTxt, (err) => {//need data to append
       if (err) throw err;
     });
 
