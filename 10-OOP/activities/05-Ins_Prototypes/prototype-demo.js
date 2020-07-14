@@ -1,5 +1,5 @@
 // 1.
-myArray = [2, 4, 6, 8];
+var myArray = [2, 4, 6, 8];
 console.log(myArray);
 
 myArray.forEach((num) => console.log(num));

@@ -4,6 +4,10 @@ function Programmer(name, position, age, language) {
   this.position = position;
   this.age = age;
   this.language = language;
+ //  this.printInfo = function() {
+ //  	console.log("Name: " + this.name + "\nPosition: " + this.position +
+ //  	"\nAge: " + this.age + "\nLanguages: " + this.language);
+	// };
 
 }
 
@@ -28,6 +32,7 @@ sally.printInfo();
 
 //hmmm. 
 var arr = [];
+var arrTwo = [];
 
 var arr = new Array();
 

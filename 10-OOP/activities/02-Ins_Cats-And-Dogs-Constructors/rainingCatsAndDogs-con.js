@@ -1,6 +1,6 @@
 // Constructor function which can be used to create objects containing the properties "raining", "noise", and the "makeNoise()" function
-function Animal(raining, noise) {
-  this.raining = raining;
+function Animal(noise) {
+  this.raining = true;
   this.noise = noise;
   this.makeNoise = function() {
     if (this.raining === true) {
@@ -12,6 +12,7 @@ function Animal(raining, noise) {
 // Sets the variables "dogs" and "cats" to be animal objects and initializes them with raining and noise properties
 var dogs = new Animal(true, "Woof!");
 var cats = new Animal(false, "Meow!");
+var bunny = new Animal(false, "hop hop");
 
 // Calling dogs and cats makeNoise methods
 dogs.makeNoise();
