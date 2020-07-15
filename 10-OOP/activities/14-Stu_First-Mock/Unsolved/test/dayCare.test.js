@@ -24,15 +24,22 @@ describe("DayCare", () => {
     it("should not add a child over the 'ageLimit'", () => {
       const child = new Child("Tammy", 8);
       const dayCare = new DayCare();
+      const mock = jest.spyOn(console, "log");
+      mock.mockImplementation(() => { });
+      const message = "Unable to add child, they are over the age limit";
 
       dayCare.addChild(child);
-
+      expect(mock).toBeCalledWith(message);
       expect(dayCare.children.length).toEqual(0);
+      mock.mockRestore();
     });
 
     it("should not add a child if already at capacity", () => {
       const dayCare = new DayCare();
       const child = new Child("Alice", 4);
+      const message = "At capacity, unable to add more children";
+      const mock = jest.spyOn(console, "log");
+      mock.mockImplementation(() => { });
       dayCare.children = [
         new Child("Tammy", 1),
         new Child("Mark", 2),
@@ -40,8 +47,9 @@ describe("DayCare", () => {
       ];
 
       dayCare.addChild(child);
-
+      expect(mock).toBeCalledWith(message);
       expect(dayCare.children.length).toEqual(3);
+      mock.mockRestore();
     });
 
     it("should throw an error if not provided a Child object as an argument", () => {
@@ -80,11 +88,27 @@ describe("DayCare", () => {
       const child2 = new Child("Mark", 2);
       const child3 = new Child("Alvin", 1);
       dayCare.children = [child1, child2, child3];
+      const message = "Child not found";
+      const mock = jest.spyOn(console, "log");
 
+      mock.mockImplementation(() => { });
       const removed = dayCare.pickupChild("Fred");
 
+      expect(mock).toBeCalledWith(message);
       expect(typeof removed).toEqual("undefined");
       expect(dayCare.children).toEqual([child1, child2, child3]);
+      mock.mockRestore();
     });
+    it("should return if kid is overage", () => {
+      const child = new Child("Tammy", 8);
+      const dayCare = new DayCare();
+      const mock = jest.spyOn(console, "log");
+      mock.mockImplementation(() => { });
+      const message = "Unable to add child, they are over the age limit";
+
+      dayCare.addChild(child);
+      expect(mock).toBeCalledWith(message);
+      mock.mockRestore();
+    })
   });
 });

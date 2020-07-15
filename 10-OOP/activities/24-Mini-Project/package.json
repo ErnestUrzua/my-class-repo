@@ -1,0 +1,15 @@
+{
+  "name": "24-Mini-Project",
+  "version": "1.0.0",
+  "description": "In this assignment, you will create a Word Guess command-line game using OOP. It is up to you whether you decide to use ES6 class syntax or constructor functions. For the purposes of these instructions, we will use `class` syntax.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.1.0"
+  }
+}

@@ -5,6 +5,20 @@ const fs = require("fs");
 const TV = function() {};
 
 // Find a tv show actor
+TV.prototype.findActor = function(actor){
+  const URL = "http://api.tvmaze.com/search/people?q=" + actor;
+
+  axios.get(URL).then(function(response) {
+    console.log(response);
+
+    fs.appendFile("log.txt", actorData, err => {
+      if (err) throw err;
+
+      console.log(actorData);
+    });
+  });
+}
+
 
 // Find a tv show
 TV.prototype.findShow = function(show) {

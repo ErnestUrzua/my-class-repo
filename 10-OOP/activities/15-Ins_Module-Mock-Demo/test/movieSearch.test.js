@@ -28,6 +28,8 @@ describe("MovieSearch", () => {
 
       expect(movie.search(name)).resolves.toEqual({ data: {} });
       expect(axios.get).lastCalledWith(movie.buildUrl(name));
+      expect(axios.get).lastCalledWith(`https://www.omdbapi.com/?t=${name}&apikey=trilogy`);
+// 
     });
   });
 });
