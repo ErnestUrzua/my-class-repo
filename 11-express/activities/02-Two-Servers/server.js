@@ -19,7 +19,6 @@ function handleRequest2(request, response) {
     response.end("It Works!! Path Hit: Server 2 " + request.url);
 }
 
-
 // Use the Node HTTP package to create our server.
 // Pass the handleRequest function to empower it with functionality.
 var server1 = http.createServer(handleRequest1);
