@@ -6,7 +6,7 @@ var PORT = 3000;
 
 // Sets up the Express app to handle data parsing
 //If extended is false, you can not post "nested object"
-//{ person: { name: 'bobby', age: '3' } }
+// { person: "{ name: 'bobby', age: '3' }" }
 //If extended is true =>
 // { person: { name: 'bobby', age: '3' } }
 
@@ -69,7 +69,7 @@ app.get("/api/characters/:character", function(req, res) {
 });
 
 // Create New Characters - takes in JSON input
-app.post("/api/characters/new", function(req, res) {
+app.post("/api/characters/farley", function(req, res) {
   var newcharacter = req.body;
 
   console.log(newcharacter);

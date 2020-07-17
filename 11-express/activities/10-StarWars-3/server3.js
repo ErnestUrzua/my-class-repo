@@ -36,12 +36,14 @@ app.get("/", function(req, res) {
 
 // What does this route do?
 app.get("/api/characters", function(req, res) {
+  var params = req.params;//{}
   return res.json(characters);
 });
 
 // What does this route do?
 app.get("/api/characters/:character", function(req, res) {
   // What does this code do?
+    var params = req.params;//{character: ???}
   var chosen = req.params.character;
   console.log(chosen);
 

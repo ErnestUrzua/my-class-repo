@@ -46,6 +46,12 @@ app.get("/", function(req, res) {
   // res.send("Welcome to the Star Wars Page!")
   res.sendFile(path.join(__dirname, "view.html"));
 });
+   //The path.join() method joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path.
+   // __dirname => In Node.js, __dirname is always the directory in which the currently executing script resides. 
+   // So if you typed __dirname into /d1/d2/myscript.js, the value would be /d1/d2.
+   //  By contrast, . gives you the directory from which you ran the node command in your terminal window 
+   //  (i.e. your working directory) when you use libraries like path and fs. 
+   //  The exception is when you use . with require(). The path inside require is always relative to the file containing the call to require.
 
 // app.get("/hello", function(req, res) {
 //   // res.send("Welcome to the Star Wars Page!")

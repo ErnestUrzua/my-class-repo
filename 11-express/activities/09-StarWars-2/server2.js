@@ -32,16 +32,17 @@ app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/api/:character", function(req, res) {
+app.get("/api/:character/:name", function(req, res) {
 
+  console.log("meow");
   var chosen = req.params.character;
   console.log(req.params)
 
 
   // What does this log?
-  console.log(chosen);
+  // console.log(chosen);
 
-  res.end();
+  res.send(chosen);
 });
 
 
