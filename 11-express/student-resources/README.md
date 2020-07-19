@@ -131,6 +131,30 @@ app.get(/a/, function (req, res) {
 
 ```
 
+This route path will match anything that starts with an “a” in the route name.
+```JavaScript
+app.get(/^a/, function (req, res) {
+  res.send('/^a/')
+})
+
+```
+
+This route path will match anything that ends with an “a” in the route name.
+```JavaScript
+app.get(/a$/, function (req, res) {
+  res.send('/a$/')
+})
+
+```
+
+This route path will match anything that starts with an “ab” and ends with zero or more "c"'s in the route name.
+```JavaScript
+app.get(/^abc*$/, function (req, res) {
+  res.send('/a$/')
+})
+
+```
+
 
 Route parameters
 Route parameters are named URL segments that are used to capture the values specified at their position in the URL. The captured values are populated in the req.params object, with the name of the route parameter specified in the path as their respective keys.
@@ -165,13 +189,14 @@ The methods on the response object (res) in the following table can send a respo
 | :---: | :---: |
 | **---------**     | **--**  |
 | [res.download()](http://expressjs.com/en/4x/api.html#res.download)     | Prompt a file to be downloaded. |
-| [res.json()](http://expressjs.com/en/4x/api.html#res.end)   | Send a JSON response. |
-| [res.jsonp()](http://expressjs.com/en/4x/api.html#res.json)  | Send a JSON response with JSONP support. |
+| [res.json()](http://expressjs.com/en/4x/api.html#res.json)   | Send a JSON response. |
+| [res.jsonp()](http://expressjs.com/en/4x/api.html#res.jsonp)  | Send a JSON response with JSONP support. |
 | [res.redirect()](http://expressjs.com/en/4x/api.html#res.redirect)  | Redirect a request. |
 | [res.render()](http://expressjs.com/en/4x/api.html#res.render) | Render a view template. |
 | [res.send()](http://expressjs.com/en/4x/api.html#res.send) | Send a response of various types. |
 | [res.sendFile()](http://expressjs.com/en/4x/api.html#res.sendFile)  | Send a file as an octet stream. |
-| [res.sendStatus()](http://expressjs.com/en/4x/api.html#res.sendStatus)  | Set the response status code and send its string representation as the response body. |
+| [res.sendStatus()](http://expressjs.com/en/4x/api.html#res.sendStatus)  | Set the response status code and send its string representation as the response body. 
+| [res.end()](http://expressjs.com/en/4x/api.html#res.end)   | Ends the response process. |
 
 [More about HTTP Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
@@ -217,7 +242,8 @@ Note: These routes can build. For example:
 | users/:id/posts/:id      | GET       | show   |  return a HTML file for displaying a specific post belonging to a user
 | /api/users/:id/posts/:id | GET       | show   |  return JSON of a specific post belonging to a user
 | users/:id/posts/:id/edit | GET       | edit   |  return an HTML form for editing a post belonging to a single user
-| /api/users/:id/posts/:id | PATCH/PUT | update |  update a specific post belonging to a single user
+| /api/users/:id/posts/:id | PUT       | update |  update a specific post belonging to a single user
+| /api/users/:id/posts/:id | PATCH     | update |  update a part of a specific post belonging to a single user
 | /api/users/:id/posts/:id | DELETE    | destroy|  delete a specific post belonging to a single user
 
 -----------------------------------------
@@ -232,9 +258,9 @@ Note: These routes can build. For example:
 
 * Middleware is any number of functions that are invoked by the Express.js routing layer before your final request handler is, and thus sits in the middle between a raw request and the final intended route. We often refer to these functions as the middleware stack since they are always invoked in the order they are added.
 
-* Middleware can be defined using the app.use method.
+* Middleware can be defined using the app.use() method.
 
-* Middleware can transform the request from the browser before we work with it. In the case of body-parser, it takes the unreadable request and turns it into a readable object and attaches it to req.body. By the time the request gets to our routes, body-parser has already formatted it for us.
+* Middleware can transform the request from the browser before we work with it. In the case of body-parser, it takes the unreadable request and turns it into a readable object and attaches it to the req.body property. By the time the request gets to our routes, body-parser has already formatted it for us.
 
 body-parser is an example of middleware.
 

@@ -13,11 +13,6 @@ function handleRequest(req, res) {
 
   // Here we use the fs package to read our index.html file
   fs.readFile(__dirname + "/index.html", function(err, data) {
-  	// In Node.js, __dirname is always the directory in which the currently executing script resides. 
-  	// So if you typed __dirname into /d1/d2/myscript.js, the value would be /d1/d2.
-   //  By contrast, . gives you the directory from which you ran the node command in your terminal window 
-   //  (i.e. your working directory) when you use libraries like path and fs. 
-   //  The exception is when you use . with require(). The path inside require is always relative to the file containing the call to require.
     if (err) throw err;
     // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
     // an html file.

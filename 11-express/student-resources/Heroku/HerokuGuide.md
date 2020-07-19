@@ -34,8 +34,8 @@ To begin with, you'll need a git repository initialized locally with your basic 
 2. Run the command: `git remote –v` .
    * This is to show you that right now, you do not have heroku listed as a remote repository.
 
-3. Run the command `heroku create`.
-   * This will create an app instance on the Heroku server and will add heroku as a remote for your local git repository.
+3. Run the command `heroku create` or `heroku create <name>`.
+   * This will create a randomly named or named app instance on the Heroku server and will add heroku as a remote for your local git repository.
 
 4. Run `git remote –v` again.
    * This isn't necessary, but helps to confirm that Heroku is now in your list of remotes. This time you should see the `heroku` remote.

@@ -7,7 +7,13 @@ var server = http.createServer(handleRequest);
 
 function handleRequest(req, res) {
   // console.log(req);
-  // Saving the request data as a variable
+  // console.log("*****Headers******")
+  // console.log(req.headers);
+  // console.log("*****URL******")
+  // console.log(req.url);
+  // console.log("*****method******")
+  // console.log(req.method);
+  //Saving the request data as a variable
   var requestData = "";
 
   // When the server receives data...
