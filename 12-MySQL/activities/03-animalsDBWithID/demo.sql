@@ -33,23 +33,20 @@ CREATE TABLE favorite_movies (
 INSERT INTO favorite_foods (food, score)
 VALUES ("Lobster", 95);
 
-INSERT INTO favorite_songs (song, artist, score)
-VALUES ("Friday", "Rebecca Black", 100);
+INSERT INTO favorite_songs (song, artist)
+VALUES ("bohemian rhapsody", "queen");
 
-INSERT INTO favorite_songs (song, artist, score)
-VALUES ("Best Song Ever", "Jon Lajoie", 95);
-
-INSERT INTO favorite_songs (song, artist, score)
-VALUES ("Ya ochen rad, ved ya, nakonets, vozvrashchajus domoy", "Eduard Khil", 100);
+INSERT INTO favorite_songs (song, artist)
+VALUES ("Umbrella", "RhiRhi");
 
 INSERT INTO favorite_movies (movie, five_times, score)
-VALUES ("Epic Movie", FALSE, 98);
+VALUES ("Joe Dirt", TRUE, 100);
 
 INSERT INTO favorite_movies (movie, five_times, score)
-VALUES ("Alvin and the Chipmunks: The Squeakquel", TRUE, 99);
+VALUES ("Mean Girls", TRUE, 100);
 
-INSERT INTO favorite_movies (movie, five_times, score)
-VALUES ("Plan 9 from Outer Space", true, 100);
+INSERT INTO favorite_movies (movie, score)
+VALUES ("Casablanca", 100);
 
-INSERT INTO favorite_movies (movie, five_times, score)
-VALUES ("The Room", true, 100);
+
+
