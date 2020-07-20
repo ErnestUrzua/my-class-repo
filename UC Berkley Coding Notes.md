@@ -351,21 +351,18 @@ var movie = $("#movie-input").val().trim(); //selects the value from an id
   
 
 ## take the text area of a class, in this case class event
-
-  var text = $(this).siblings(".event").val(); 
+`var text = $(this).siblings(".event").val(); `
   
 
 ## Create a variable named "letterBtn" equal to $("<button>"); 
-
-  var letterBtn = $("<button>"); 
+`var letterBtn = $("<button>");` 
 
 ## Then give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
-
-  letterBtn.addClass("letter-button letter letter-button-color"); 
+`letterBtn.addClass("letter-button letter letter-button-color");` 
 
 ## Then give each "letterBtn" a data-attribute called "data-letter".
 
-  letterBtn.attr("data-letter", letters[i]); 
+  `letterBtn.attr("data-letter", letters[i]);`
 
 ## Then give each "letterBtns" a text equal to "letters[i]".
 
@@ -467,14 +464,10 @@ console.log(process.argv[2]);
 var a = process.argv[2]; 
 var b = process.argv[2]; 
   if (a === b ){
-
     console.log(true)
-
   }
   else {
-
     console.log(false)
-
   }
   
   ## compare them directly or with variables
@@ -494,11 +487,9 @@ var b = process.argv[2];
   }
 
 # import another js file
-
 var filename =  require("./maths.js"); 
 
 # how to pass arguments 
-
 var operator = process.argv[2]; 
 var num1 = parseInt(process.argv[3]); 
 var num2 = parseInt(process.argv[4]); 
@@ -514,31 +505,27 @@ console.log(maths.sum(num1, num2));
   
 
 # npm init
-
 installs the json package
 npm init -y installs with out asking any questions
 
 ## how to install a package in the directory
-
 npm install inquirer --save //installs the package in the directory
   
 
 # when to use arrow functions
-
 dont use in an object when refering to the object itself
 ex. dog {name: 
 }
 
 # map and filter
-
 filter is a function that returns true or false, and adds to an array if true
 map is a built in array method that creates a new array and stores every element from the input array
 
-## map returns a new array of whatever work you did on the input array
+-map returns a new array of whatever work you did on the input array
 
-## filter only returns an array of those that pass some condition
+-filter only returns an array of those that pass some condition
 
-## for each just does some work for each element in the array
+-for each just does some work for each element in the array
 
   
 
@@ -635,3 +622,4 @@ SCORE() //used for length
 
 `INSERT INTO programmers(firstName, lastName, rating)
 VALUES ("Sandy", "Cheeks", 75); `
+
