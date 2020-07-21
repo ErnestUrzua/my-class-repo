@@ -597,6 +597,25 @@ await waits till the work is done
 aysnc does multiple work at the at different times
 
 # Express.js
+## requires
+`var NotesDb = "../../db/db.json";` returns the path
+`var NotesDb = require("../../db/db.json");` returns the object
+## one req or res only
+when doing an app.post or get, we only want one res or req param, because that stops the function so cant have two.
+
+## order of routes matters
+`// If no matching route is found default to index
+app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "../../../public/index.html"));
+});` 
+be mindful of where this is in the file as it can execute early and mess up certain behaviors.
+
+## Parsing vs stringify JSON
+Parsing puts the long ass string back into and object format for javascript
+
+send an object to a webserver with stringfy
+-Convert a JavaScript object into a string with JSON.stringify().
+
 
 ## creating a post method
 
