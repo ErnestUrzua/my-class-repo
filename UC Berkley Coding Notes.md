@@ -642,3 +642,11 @@ SCORE() //used for length
 `INSERT INTO programmers(firstName, lastName, rating)
 VALUES ("Sandy", "Cheeks", 75); `
 
+## Heroku
+package lock must have a `"start": "node server.js"` script
+and must be in root
+
+### heroku login
+open in terminal and type `heroku login`
+then you can type `heroku logs --tail --app ernesturzua-note-taker`
+and see logs
