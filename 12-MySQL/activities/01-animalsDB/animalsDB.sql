@@ -18,6 +18,8 @@ CREATE TABLE people (
   pet_age INTEGER(10)
 );
 
+
+
 -- Creates new rows containing data in all named columns --
 INSERT INTO people (name, has_pet, pet_name, pet_age)
 VALUES ("Jerome", TRUE, "Farley", 5);

@@ -48,8 +48,6 @@ VALUES ("Squilliam", "Fancyson", 99);
 INSERT INTO programmers(firstName, lastName)
 VALUES ("Gary", "Squarepants");
 
-
-
 INSERT INTO programming_languages(language, rating)
 VALUES ("HolyC", 100);
 

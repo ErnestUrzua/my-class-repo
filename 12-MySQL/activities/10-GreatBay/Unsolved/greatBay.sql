@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS greatBayDB;
+
+CREATE DATABASE greatBayDB;
+
+USE greatBayDB;
+
+CREATE TABLE items (
+  id INT NOT NULL AUTO_INCREMENT,
+  category VARCHAR(45),
+  price DECIMAL(10,2),
+  quantity INTEGER(3),
+  PRIMARY KEY (id)
+);
