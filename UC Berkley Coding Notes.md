@@ -650,3 +650,9 @@ and must be in root
 open in terminal and type `heroku login`
 then you can type `heroku logs --tail --app ernesturzua-note-taker`
 and see logs
+
+## creating routes with paramters in express
+app.get ("/:operation/:firstNum/:secondNum") //this gets the operation and first and second num
+var firstNum = parseInt(req.params.firstNum); //parseInt makes sure the input is a int and not a string
+
+var operation = req.params.operation; //setting the parameter operation in the route to var operation
