@@ -42,56 +42,37 @@ support tab/tutor request
   
   ## Color deficiencies
   ## red green are big deficiencies so do NOT use them on form fields
-
-    
-
   ## use visual asterisks such as asterisk or question mark
 
     as well as color to satisfy people with learning disabilities
 
-    
-
   ## seperate blocks of content with white space and borders
-
-    
 
   ## evaluate color contrast
   
   ## label form fields for screen reader
 
-    
-
   ## label the tab order accordingly
-
-    
 
   ## group similiar field sets, such as personal information
 
     etc.
 
-    
-
   ## use tables for data and not layout
 
       when necesseary use scope attribute to denote complex
-      nested relationships
-      
+      nested relationships  
 
   ## make sure page is accessible via tab and arrows
 
       no hover llinks, screen reader must be able to access them
       
-
   ## Dont use Aria, use native HTML tags instead
-
-    
 
   ## make dynamic content accessible
 
     any page or object that dynamically refreshes or changes needs to be alt accessible.
     ##use aria roles and alerts for this
-
-    
 
   ## ensure video does not auto play sound
 
@@ -100,10 +81,6 @@ support tab/tutor request
     ##for slideshows make sure each picture has an alt text
     and can be navigated via keyboard
       
-
-  
-  
-
 # GIT
 
 whenever changing a file you have to add the file to git
@@ -157,7 +134,6 @@ use percent's when accounting for widths, e.g. 100% will be the full span of a s
   
   order of listed css the very last one overrides any other css rules
   
-
 # javascript
 
   var name = "nameof variable"; 
@@ -596,6 +572,15 @@ await waits till the work is done
 
 aysnc does multiple work at the at different times
 
+## Heroku
+package lock must have a `"start": "node server.js"` script
+and must be in root
+
+### heroku login
+open in terminal and type `heroku login`
+then you can type `heroku logs --tail --app ernesturzua-note-taker`
+and see logs
+
 # Express.js
 ## requires
 `var NotesDb = "../../db/db.json";` returns the path
@@ -642,17 +627,17 @@ SCORE() //used for length
 `INSERT INTO programmers(firstName, lastName, rating)
 VALUES ("Sandy", "Cheeks", 75); `
 
-## Heroku
-package lock must have a `"start": "node server.js"` script
-and must be in root
-
-### heroku login
-open in terminal and type `heroku login`
-then you can type `heroku logs --tail --app ernesturzua-note-taker`
-and see logs
-
 ## creating routes with paramters in express
 app.get ("/:operation/:firstNum/:secondNum") //this gets the operation and first and second num
 var firstNum = parseInt(req.params.firstNum); //parseInt makes sure the input is a int and not a string
 
 var operation = req.params.operation; //setting the parameter operation in the route to var operation
+
+## santizing inputs
+`connection.query("INSERT INTO tasks (task) VALUES (?)", [req.body.task], function(err, result) {
+    if (err) throw err;
+
+    res.redirect("/");
+  });
+});`
+

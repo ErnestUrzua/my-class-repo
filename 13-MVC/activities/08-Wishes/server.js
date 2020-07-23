@@ -48,23 +48,31 @@ app.get("/", function (req, res) {
 });
 
 // Post route -> back to home
-app.post("/", function (req, res) {
+app.post("/", function (req,res) {
+  //client request enters the server
+  //use the information provided on the request object to make things (in the case of a post)
+
+  //req.body.email, req.body.password, req.body.name
+//const newUser = {email: req.body.email, etc etc}
+//create newUser in the Db --->new User(newUser) 
+
+
+  //
   // Test it
   console.log('You sent');
   console.log(req.body.wish);
 
   // Test it
   // return res.send('You sent, ' + req.body.task);
-
   // When using the MySQL package, we'd use ?s in place of any values to be inserted, which are then swapped out with corresponding elements in the array
   // This helps us avoid an exploit known as SQL injection which we'd be open to if we used string concatenation
   // https://en.wikipedia.org/wiki/SQL_injection
   connection.query("INSERT INTO wishes (wish) VALUES (?)",[req.body.wish], function (err, results) {
     if (err) throw err;
-
     res.redirect("/");
   });
 });
+
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function () {
