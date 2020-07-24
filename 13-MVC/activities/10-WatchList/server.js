@@ -20,7 +20,7 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "password",
-  database: "day_planner_db"
+  database: "moviePlannerDB"
 });
 
 connection.connect(function(err) {
@@ -32,33 +32,35 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-// Use Handlebars to render the main index.html page with the plans in it.
+// Use Handlebars to render the main index.html page with the movies in it.
 app.get("/", function(req, res) {
-  connection.query("SELECT * FROM plans;", function(err, data) {
+  connection.query("SELECT * FROM movies;", function(err, data) {
     if (err) {
       return res.status(500).end();
     }
 
-    res.render("index", { plans: data });
+    res.render("index", { movies: data });
   });
 });
 
-// Create a new plan
-app.post("/api/plans", function(req, res) {
-  connection.query("INSERT INTO plans (plan) VALUES (?)", [req.body.plan], function(err, result) {
+// Create a new movie
+app.post("/api/movies", function(req, res) {
+  connection.query("INSERT INTO movies (movie) VALUES (?)", [req.body.movie], function(err, result) {
+    console.log(result);
+    
     if (err) {
       return res.status(500).end();
     }
 
-    // Send back the ID of the new plan
+    // Send back the ID of the new movie
     res.json({ id: result.insertId });
     console.log({ id: result.insertId });
   });
 });
 
-// Update a plan
-app.put("/api/plans/:id", function(req, res) {
-  connection.query("UPDATE plans SET plan = ? WHERE id = ?", [req.body.plan, req.params.id], function(err, result) {
+// Update a movie
+app.put("/api/movies/:id", function(req, res) {
+  connection.query("UPDATE movies SET movie = ? WHERE id = ?", [req.body.movie, req.params.id], function(err, result) {
     if (err) {
       // If an error occurred, send a generic server failure
       return res.status(500).end();
@@ -72,9 +74,9 @@ app.put("/api/plans/:id", function(req, res) {
   });
 });
 
-// Delete a plan
-app.delete("/api/plans/:id", function(req, res) {
-  connection.query("DELETE FROM plans WHERE id = ?", [req.params.id], function(err, result) {
+// Delete a movie
+app.delete("/api/movies/:id", function(req, res) {
+  connection.query("DELETE FROM movies WHERE id = ?", [req.params.id], function(err, result) {
     if (err) {
       // If an error occurred, send a generic server failure
       return res.status(500).end();

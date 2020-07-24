@@ -14,7 +14,6 @@ var anythingGoes = function(functionOne, functionTwo, functionThree) {
   return functionThree(functionOne(3, 4), functionTwo(7, 2));
 };
 
-// Challenge: what does this return?
+// Challenge: what does this return & Why?
 anythingGoes(multiply, subtract, sum);
-
 //Answer: 12 + 5 = 17

@@ -11,10 +11,10 @@ var multiply = function(numOne, numTwo) {
 };
 
 var anythingGoes = function(functionOne, functionTwo, functionThree) {
-  functionThree(functionOne(3, 4), functionTwo(7, 2));
+  return functionThree(functionOne(3, 4), functionTwo(7, 2));
 };
 
-// Challenge: what does this return?
+// Challenge: what does this return & Why?
 anythingGoes(multiply, subtract, sum);
 
 //Answer: undefined

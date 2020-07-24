@@ -14,18 +14,18 @@
 
 <h2>Create a Plan</h2>
 <form id="createplan" class="button-size">
-  <textarea id="content" type="text" name="plan"></textarea>
+  <textarea type="text" name="plan" id="new-plan"></textarea>
   <button type="submit">Save Plan!</button>
 </form>
 
 <h2>Update a Plan</h2>
 <form id="updateplan" class="button-size">
-  <select name="id">
+  <select name="id" id="id-value">
 		{{#each plans}}
-			<option value="{{this.id}}">{{this.plan}}</option>
+			<option value="{{id}}">{{plan}}</option>
 		{{/each}}
 	</select>
-  <textarea type="text" name="plan" placeholder="plan"></textarea>
+  <textarea type="text" name="plan" id="updated-plan"placeholder="plan"></textarea>
   <button type="submit">Update Plan!</button>
 </form>
 
@@ -53,7 +53,7 @@
 
     // [name=plan] will find an element with a "name" attribute equal to the string "plan"
     var newPlan = {
-      plan: $("#createplan [name=plan]").val().trim()
+      plan: $("#new-plan").val().trim()
     };
 
     // Send the POST request.
@@ -74,10 +74,10 @@
     event.preventDefault();
 
     // Get the ID by finding an element with a "name" attribute equal to the string "id"
-    var id = $("[name=id]").val().trim();
+    var id = $("#id-value").val().trim();
 
     var updatedPlan = {
-      plan: $("#updateplan [name=plan]").val().trim()
+      plan: $("#updated-plan").val().trim()
     };
 
     // Send the PUT request.

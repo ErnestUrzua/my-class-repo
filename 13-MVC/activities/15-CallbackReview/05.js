@@ -10,5 +10,7 @@ var addCallBacks = function(functionOne, functionTwo) {
   return functionOne(6, 2) + functionTwo(6, 3);
 };
 
-// What does this return?
+// What does this return & Why?
 addCallBacks(sum, subtract);
+//Answer: 8 + 3 = 11
+

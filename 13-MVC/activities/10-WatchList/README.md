@@ -2,7 +2,7 @@
 
   * Create a full-stack application with Express, MySQL and Handlebars.
 
-    * HINT: this web application will be very similar to the app we just explored. Please feel free to leverage that code when creating this code.
+    * HINT: this web application will be very similar to the app your instructor just demonstrated and slacked out. Please feel free to leverage that code when creating this code.
 
   * Create a `schema.sql` file. Inside of that file, do the following:
 
