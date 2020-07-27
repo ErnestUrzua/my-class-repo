@@ -427,7 +427,11 @@ https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.867052
 # using git
 
 https://stefanbauer.me/articles/how-to-keep-your-git-fork-up-to-date
-$ git rebase upstream/master
+`git remote add upstream git@github.com:jdavis3333/ProjectX.git`
+
+`git fetch upstream`
+
+`git merge upstream/master master`
 
 # NODE.js
 
@@ -641,3 +645,45 @@ var operation = req.params.operation; //setting the parameter operation in the r
   });
 });`
 
+# Mysql
+crud options 
+`findAll()` create
+`findOne()` find one
+`destroy()` deletes
+`update()` updates
+`.sync({force: true})` tells db to drop if not true
+
+## sequelize
+create a model 
+```
+module.exports = function(sequelize, DataTypes) {
+  var Todo = sequelize.define("Todo", {
+    
+    text: {
+      type: sequelize.STRING,
+      validate:{is: ["^[a-z]+$",'i'],
+      len: [1,140]
+    }},
+    complete: DataTypes.BOOLEAN
+  });
+  return Todo;
+};
+```
+
+### get request
+Get route for retrieving a single post
+```
+  app.get("/api/posts/:id", function(req, res) {
+    db.Post.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbPost) {
+      console.log(dbPost);
+      res.json(dbPost);
+    });
+  });
+  ```
+
+### post/author relationships
+foriegn key goes on owner
