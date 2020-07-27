@@ -50,3 +50,5 @@
 | 4. | :rocket: | [Spiral Matrix Creation](./01-optional-code-drills/04-rock-spiral-matrix-creation) | Algorithms, Matrices |
 | 5. | :rocket: | [City Skyline](./01-optional-code-drills/05-rock-city-skyline) | Algorithms, Matrices |
 | 6. | :rocket: | [Sass](./01-optional-code-drills/06-rock-sass-tutorial) |  Sass, CSS, HTML |
+| 7. | :rocket: | [one-to-many-Blog-Post](course-content/14-Full-Stack/activities/15-one-to-many-Blog-Post)| Sequelize One to Many |
+| 8. | :rocket: | [many-to-many-Events](course-content/14-Full-Stack/activities/08-many-to-many-Events)| Sequelize Many to Many |
