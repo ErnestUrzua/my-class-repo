@@ -322,7 +322,6 @@ var movie = $("#movie-input").val().trim(); //selects the value from an id
 ```
 
 ## select the parent id for a button
-
  `var id = $(this).parent().attr("id");`
   
 
@@ -337,7 +336,6 @@ var movie = $("#movie-input").val().trim(); //selects the value from an id
 `letterBtn.addClass("letter-button letter letter-button-color");` 
 
 ## Then give each "letterBtn" a data-attribute called "data-letter".
-
   `letterBtn.attr("data-letter", letters[i]);`
 
 ## Then give each "letterBtns" a text equal to "letters[i]".
@@ -687,3 +685,4 @@ Get route for retrieving a single post
 
 ### post/author relationships
 foriegn key goes on owner
+
