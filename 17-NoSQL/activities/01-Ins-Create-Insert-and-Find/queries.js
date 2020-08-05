@@ -60,6 +60,7 @@ db.places.find({"continent": "North America"}).pretty()
 
 
 db.places.find({_id:[COPY AN OBJECTID FROM THE PREVIOUS FIND RESULTS]})
+db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")})
 
 
 // Example: `db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")})`

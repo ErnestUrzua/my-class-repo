@@ -21,7 +21,7 @@ db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}})
 
 
 db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}}, {multi: true})
-
+db.students.updateMany({"country": "Morocco"}, {$set: {"continent": "Antarctica"}} 
 
 // * Recall from the earlier demo the structure of our document:
 

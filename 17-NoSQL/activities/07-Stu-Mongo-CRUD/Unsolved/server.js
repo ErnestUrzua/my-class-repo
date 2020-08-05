@@ -58,14 +58,19 @@ app.get("/all", (req, res) => {
 // GET: /find/:id
 // ==================================================================
 app.get("/find/:id", (req, res) => {
-
+  db.notes.findOne({"_id" : mongojs.ObjectID(req.params.id)})
 })
 // 4. Update one note in the database's collection by it's ObjectId
 // (remember, mongojs.ObjectId(IdYouWantToFind)
 // POST: /update/:id
 // ================================================================
 app.post("/update/:id", (req, res) => {
-  
+  db.notes.findAndModify({
+    query: {"_id" : mongojs.ObjectID(req.params.id), 
+    update:
+    
+  }
+  })
 })
 // 5. Delete one note from the database's collection by it's ObjectId
 // (remember, mongojs.ObjectId(IdYouWantToFind)

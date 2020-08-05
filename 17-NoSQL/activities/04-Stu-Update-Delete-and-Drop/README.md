@@ -12,7 +12,7 @@
 
 * Remove the student to the other side of you from your database.
 
-* Add a field of `gavecandy` with a value of `false` to everyone in the array.
+* Add a field of `gavecandy` with a value of `false` to everyone in your row.
 
 * Change the value of `gavecandy` to true for yourself.
 

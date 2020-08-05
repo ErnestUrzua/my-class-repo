@@ -686,3 +686,36 @@ Get route for retrieving a single post
 ### post/author relationships
 foriegn key goes on owner
 
+## MongoDB
+```
+app.get("/find/:id", (req, res) => {
+  db.notes.findOne({"_id" : mongojs.ObjectID(req.params.id)})
+})
+```
+
+```
+app.post("/update/:id", (req, res) => {
+  db.notes.findAndModify({
+    query: {"_id" : mongojs.ObjectID(req.params.id), 
+    update:
+  }
+  })
+})
+```
+```
+app.post("/submit", ({ body }, res) => {
+  // Save the request body as an object called book
+  const book = body;
+  db.books.insert(book)
+  // If we want the object to have a boolean value of false,
+  // we have to do it here, because the ajax post will convert it
+  // to a string instead of a boolean
+  book.read = false;
+});
+```
+
+### setting up models in mongoose
+const mongoose = require("mongoose");
+
+## 
+

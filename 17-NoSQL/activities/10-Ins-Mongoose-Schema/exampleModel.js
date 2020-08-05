@@ -30,7 +30,7 @@ const ExampleSchema = new Schema({
 
   longstring: {
     type: String,
-    validate: [({ length }) => length >= 6, "Longstring should be longer."]
+    validate: [({ length }) => length <= 6, "Longstring should be longer."]
   }
 });
 

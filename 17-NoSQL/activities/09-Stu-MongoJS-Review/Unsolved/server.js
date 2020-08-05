@@ -33,7 +33,7 @@ db.on("error", error => {
 app.post("/submit", ({ body }, res) => {
   // Save the request body as an object called book
   const book = body;
-
+  db.books.insert(book)
   // If we want the object to have a boolean value of false,
   // we have to do it here, because the ajax post will convert it
   // to a string instead of a boolean
@@ -41,11 +41,15 @@ app.post("/submit", ({ body }, res) => {
 });
 
 // Find all books marked as read
-app.get("/read", (req, res) => {});
+app.get("/read", (req, res) => {
+  db.books.find({read: true})
+});
 
 // Find all books marked as unread
 app.get("/unread", (req, res) => {});
+  db.books.find({read: false})
 
+  
 // Mark a book as having been read
 app.put("/markread/:id", (req, res) => {
   // Remember: when searching by an id, the id needs to be passed in
