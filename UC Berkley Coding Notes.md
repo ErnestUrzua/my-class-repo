@@ -716,6 +716,80 @@ app.post("/submit", ({ body }, res) => {
 
 ### setting up models in mongoose
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-## 
+## setting up the schema
+```const ExampleSchema = new Schema({
+  string: {
+    type: String,
+    trim: true,
+    required: "String is Required"
+  },
 
+  number: {
+    type: Number,
+    unique: true,
+    required: true
+  },
+
+  email: {
+    type: String,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+  },
+
+  boolean: Boolean,
+
+  array: Array,
+
+  date: {
+    type: Date,
+    default: Date.now
+  },
+
+  longstring: {
+    type: String,
+    validate: [({ length }) => length <= 6, "Longstring should be longer."]
+  }
+});
+
+const Example = mongoose.model("Example", ExampleSchema);
+
+module.exports = Example;
+```
+## mongo commands
+.find({})
+.findOne({})
+.findMany(())
+
+
+## index.db
+different from local storage, local is restricted on size, 
+create a db
+```
+  const request = indexedDB.open("firstDatabase", 1);
+  console.log(request);
+
+  request.onerror = err => {
+    console.log(err);
+  }
+  // This returns a result that we can then manipulate.
+  //https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/onsuccess
+  request.onsuccess = event => {
+    console.log(request.result);
+    
+  };
+  ```
+  ### create an instance
+  ```// We request a database instance
+      const request = window.indexedDB.open("toDoList", 1);
+  ```
+
+  ### create an index on onjectStore
+  ```
+  objectStore.createIndex("timestamps", "timestamp");//first - what do we want to name it? second is the query path - column name. 
+  objectStore.createIndex("key", "value");//extra flags optional
+  ```
+
+  ## React 
+  npm install react-router-dom
+  npm install 
