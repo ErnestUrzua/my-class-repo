@@ -5,16 +5,18 @@ class Form extends Component {
   // Setting the component's initial state
   state = {
     firstName: "",
-    lastName: ""
+    lastName: "",
+    password: ""
   };
 
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
-    const { name, value } = event.target;
+    let value = event.target.value;
+    const name = event.target.name;
 
-    // const name = event.target.name;
-    // const value = event.target.value; 
-
+    if (name === "password") {
+      value = value.substring(0, 15);
+    }
     // Updating the input's state
     this.setState({
       [name]: value
@@ -24,12 +26,21 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+    if (!this.state.firstName || !this.state.lastName) {
+      alert("Fill out your first and last name please!");
+    } else if (this.state.password.length < 6) {
+      alert(
+        `Choose a more secure password ${this.state.firstName} ${this.state
+          .lastName}`
+      );
+    } else {
+      alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+    }
 
-    // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
-    alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
     this.setState({
       firstName: "",
-      lastName: ""
+      lastName: "",
+      password: ""
     });
   };
 
@@ -54,6 +65,13 @@ class Form extends Component {
             onChange={this.handleInputChange}
             type="text"
             placeholder="Last Name"
+          />
+          <input
+            value={this.state.password}
+            name="password"
+            onChange={this.handleInputChange}
+            type="password"
+            placeholder="Password"
           />
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
