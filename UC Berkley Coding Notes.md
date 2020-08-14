@@ -427,11 +427,14 @@ https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.867052
 https://stefanbauer.me/articles/how-to-keep-your-git-fork-up-to-date
 `git remote add upstream git@github.com:jdavis3333/ProjectX.git`
 
+
+`git remote add upstream git@github.com:donnaxnguyen/googleactivity.git`
+
 `git fetch upstream`
 
 `git merge upstream/master master`
 
-# NODE.js
+# NODE.jsgit
 
 # create a comparison
 console.log(process.argv[4]); 

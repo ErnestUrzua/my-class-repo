@@ -2,6 +2,7 @@ import React, { createContext, useReducer, useContext } from "react";
 
 const CountContext = createContext();
 const { Provider } = CountContext;
+const  Provider  = CountContext.Provider;
 
 const reducer = (state, action) => {
   switch (action.type) {
