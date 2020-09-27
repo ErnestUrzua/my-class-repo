@@ -794,5 +794,41 @@ create a db
   ```
 
   ## React 
-  npm install react-router-dom
-  npm install 
+  `npm install` installs packages 
+  `npm install react-router-dom` installs the react router
+  `npx create-react-app my-app` creates a brand new react app 
+  `npm install gh-pages --save-dev` we use this dependency when we deploy to git hub pages
+  `npm run deploy` use this after we added appropritate items in json file
+  add these to the scripts section of package.json
+  `"predeploy": "npm run build"`
+  `"deploy": " gh-pages -d build"`
+  add this to top of package.json
+  `"homepage": "https://ernesturzua.github.io/kda-akali-click-game"`
+
+  ## deploy checklist
+  ### mongo atlas
+  - make sure ip is 00000
+  - make sure deploy key for mongo ends with the right db or collection
+  example workouts is a collection
+  `mongodb+srv://admin:Wb1gtyprqiUXGeaJ@cluster0.p72y0.mongodb.net/workouts` 
+
+
+  ### heroku
+  for regular gh pages deployment, you can link your github repo and call it a day
+  - `homepage` add a url to the homepage
+
+  - under scripts add
+  `"predeploy": "npm run build"`
+  `"deploy": " gh-pages -d build"`
+  
+  - install gh pages
+  `npm install gh-pages --save-dev`
+
+  - run
+  `npm run deploy`
+
+  - gh pages branc is now deployed just get the link from git hub
+  
+  #### adding mongo to heroku
+  under var config add mongouri and the key 
+  - ex key`mongodb+srv://admin:Wb1gtyprqiUXGeaJ@cluster0.p72y0.mongodb.net/workouts`
