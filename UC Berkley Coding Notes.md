@@ -1,16 +1,10 @@
-# Tutoring
-
-availble in week 2, up to 2 hrs a week
-support tab/tutor request
-
-#Students
-
 # Homework 1 Code Refactor
-
-  ## make it accessible, meaning ez to change titles, videos, pics etc.
-  adding Closed captions on videos
+  ## accessibility
+  - make it easy to change titles, videos, pics etc.
+  - add Closed captions on videos
   
-  ## use headings <h1><h2> etc in order to logically arrange stuff, so h1 will be the first large heading and h2 will be the next one.
+  ## use headings 
+  `<h1><h2>` etc in order to logically arrange stuff, so h1 will be the first large heading and h2 will be the next one.
   if you want a certain heading larger or smaller use a css class to change that.
   
   ## semantic meaning
@@ -82,26 +76,28 @@ support tab/tutor request
     and can be navigated via keyboard
       
 # GIT
+## fetching from repo
+- `git pull`
+- `git commit -m "your note here"`
 
-whenever changing a file you have to add the file to git
-in terminal
-git add . 
-or git add filename
+## changing a file
+in terminal `git add .` 
+or `git add filename`
 
-Now commit 
-git commit -m "write a message about what you changed"
+**Now commit**
+`git commit -m "write a message about what you changed"`
 
-Push to origin
-git push origin master
+**Push to origin**
+`git push origin master`
+
 
 # VI commands
-
-  :x  quit vi
-  :wq quit and save
-  :q quit
-  :q! quit vi even if latest changes have not been saved
-  vi filename 
-  vi -r filename
+  - `:x`  quit vi
+  - `:wq` quit and save
+  - `:q` quit
+  - `:q!` quit vi even if latest changes have not been saved
+  - `vi filename` 
+  - `vi -r filename`
 
 # using terminal
 
