@@ -18,7 +18,7 @@
 
 // This method just wraps our `fizzBuzzDataTypeChecker` call. You will not need to edit this function
 function fizzBuzzSuper(dataTypeInput){
-  izzBuzzDataTypeChecker(dataTypeInput);
+  fizzBuzzDataTypeChecker(dataTypeInput);
 }
 
 // This method should evaluate what the data type is and send it to the appropriate method
@@ -31,13 +31,27 @@ function fizzBuzzDataTypeChecker(dataTypeInput){
 
 
     //if the argument is an array then call the `dataTypeArray` function with it as an argument
-
+  if (dataTypeInput instanceof Array){
+    dataTypeArray(dataTypeInput);
+  }
 
     //if the argument is an obj then call the `dataTypeObj` function with it as an argument
-
+  // else if (dataTypeInput === Object){
+  //   dataTypeObj(dataTypeInput);
+  // }
+  else if (dataTypeInput instanceof Object){
+  dataTypeObj(dataTypeInput);
+  }
 
     //if the argument is a string then call the `customIsNum` function with it as an argument to see if the string can be converted to an integer
-
+  else if (typeof dataTypeInput === 'String'){
+    if(customIsNum(dataTypeInput)){
+      fizzBuzzCalculation(parseInt(dataTypeInput));
+    }
+    else {
+      consoleLogNonNumber(dataTypeInput);
+    }
+  }
 
       //if the string argument can be converted into an integer then call the `fizzBuzzCalculation` function with it converted to an integer as an argument
 
@@ -46,16 +60,17 @@ function fizzBuzzDataTypeChecker(dataTypeInput){
 
 
     //if the argument is an integer, then call the `fizzBuzzCalculation` function with it as an argument
-
+  else if (typeof dataTypeInput === 'Number'){
+    fizzBuzzCalculation(dataTypeInput);
+  }
     
     //if the argument is a boolean, then call the `consoleLogNonNumber` function with it as an argument
-
-
+  else {
+    consoleLogNonNumber(dataTypeInput);
+  }
 
    // ----------- End Code Area -----------
 }
-
-
 
 // this method takes as an array as the argument and iterates through it and
 // sends each element to the `fizzBuzzDataTypeChecker` method we just defined.
@@ -67,12 +82,9 @@ function fizzBuzzDataTypeChecker(dataTypeInput){
 // function
 function dataTypeArray(dataTypeInput){
   // ---------- Your Code Here ----------
-
-
-
-
-
-
+  dataTypeInput.forEach(el => {
+    fizzBuzzDataTypeChecker(el);//check the element for data type
+  });
   // ----------- End Code Area -----------
 }
 
@@ -85,11 +97,12 @@ function dataTypeArray(dataTypeInput){
 // type checker method
 function dataTypeObj(dataTypeInput){
   // ---------- Your Code Here ----------
-
-
-
-
-
+  // dataTypeInput.forEach(el => {
+  //   fizzBuzzDataTypeChecker(el[key]);
+  // })
+  for(var key in dataTypeInput){
+    fizzBuzzDataTypeChecker(dataTypeInput[key])
+  }
 
   // ----------- End Code Area -----------
 }
@@ -104,11 +117,15 @@ function dataTypeObj(dataTypeInput){
 // within our iterations
 function fizzBuzzCalculation(input){
   // ---------- Your Code Here ----------
-
-
-
-
-
+  if(input % 5 === 0 && input % 3 === 0 ){
+    console.log("FizzBuzz");
+  }else if(input % 5 === 0){
+    console.log("Buzz");
+  }else if(input % 3 === 0){
+    console.log("Fizz");
+  }else{
+    console.log(input);
+  }
 
   // ----------- End Code Area -----------
 }
@@ -123,11 +140,8 @@ function fizzBuzzCalculation(input){
 function consoleLogNonNumber(input){
   // ---------- Your Code Here ----------
 
-
-
-
-
-
+  console.log(input + ' is not a number')
+  
   // ----------- End Code Area -----------
 }
 
