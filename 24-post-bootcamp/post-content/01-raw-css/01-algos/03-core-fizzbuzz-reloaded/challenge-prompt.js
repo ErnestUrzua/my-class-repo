@@ -6,13 +6,14 @@
 function checkWibble(str) {
 
   // ---------- Your Code Here ----------
-
-
-
-
-
-
-
+  if (str.length %2 === 0){
+    console.log('string is even');
+    return true;
+  }
+  else {
+    console.log('string is odd')
+    return false;
+  }
 
   // ----------- End Code Area -----------
 
@@ -25,13 +26,25 @@ function checkWibble(str) {
 function checkWobble(str) {
 
   // ---------- Your Code Here ----------
+  let vowelCount = 0;
+  for (let i = 0; i < str.length; i++) {
+    const el = str[i];
+    if (el === "a" || el ===  "e" || el ===  "i" || el ===  "o" || el === "u" || el ===  "y"){
+          vowelCount++;
+          //console.log(el);
+          //console.log('vowel count incremented + ' + vowelCount)
+        }
+    
+  }
+  // str.forEach(el => {
+  //   if (el === "a" || el ===  "e" || el ===  "i" || el ===  "o" || el === "u" || el ===  "y"){
+  //     vowelCount++;
+  //   }
 
-
-  
-
-
-
-
+    if (vowelCount %2 === 1){
+      console.log('vowel count = ' + vowelCount)
+      return true;
+    }
 
   // ----------- End Code Area -----------
 
@@ -47,15 +60,25 @@ function checkWobble(str) {
 function wibbleWobble(arr) {
   
   // ---------- Your Code Here ----------
+  arr.forEach(myFunction);
+    
+    function myFunction(el,i,arr) {
+      if(checkWibble(el)) {
+        arr[i] = 'Wibble';
+      }
+      else if(checkWobble(el)){
+        arr[i] = 'WibbleWobble';
+        //console.log(el)
+      }
 
+      else {
+        arr[i] = 'Wobble';
+      }
 
-  
-
-
-
-
+    } 
 
   // ----------- End Code Area -----------
+  console.log(arr)
   return arr;
 }
 
@@ -88,7 +111,7 @@ $(function() {
 
   // This populates our table with the initial values of the array
   // and what they are after our `wibbleWobble` function
-  for (var i = 0; i < testArray.length; i++) {
+  for (var i = 0; i < newArray.length; i++) {
     var newRow = $("<tr>")
     newRow.append($("<td>").text(testArray[i]));
     newRow.append($("<td>").text(newArray[i]));
