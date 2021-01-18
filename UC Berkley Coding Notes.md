@@ -11,8 +11,6 @@
 
     non-semantic elements: <div> and <span> - Tells nothing about its content. 
 
-    
-
     semantic elements: <form> , <table> , and <article> 
     • <article>
     • <aside>
@@ -66,13 +64,13 @@
   ## make dynamic content accessible
 
     any page or object that dynamically refreshes or changes needs to be alt accessible.
-    ##use aria roles and alerts for this
+    ## use aria roles and alerts for this
 
   ## ensure video does not auto play sound
 
     and that they can be controlled by the keyboard
-    ##videos must have CC and transcripts
-    ##for slideshows make sure each picture has an alt text
+    ## videos must have CC and transcripts
+    ## for slideshows make sure each picture has an alt text
     and can be navigated via keyboard
       
 # GIT
@@ -279,7 +277,7 @@ var countItem = JSON.parse(localStorage.getItem("count"));
 
 # ApI application processing Interface
   
-  #third party api
+  # third party api
   jquery
 
 # web API
