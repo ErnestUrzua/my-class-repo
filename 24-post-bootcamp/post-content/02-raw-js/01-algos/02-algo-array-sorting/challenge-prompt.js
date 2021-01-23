@@ -9,10 +9,39 @@
 //                Helper Functions (Optional)
 //
 // -------------------- Your Code Here --------------------
+var evenArr = [];
+var oddArr = [];
+
+function evenSort(arr) {
 
 
+  //put all even numbers in a temp array
+  arr.forEach(x => {
+    //check if the element is even
+    if (x % 2 == 0) {
+      evenArr.push(x);
+    }
+  });
+
+  evenArr.sort(function (a, b) { return (a - b) });
+  //return array
+  return evenArr;
+}
 
 
+function oddSort(arr) {
+
+
+  arr.forEach(x => {
+    //check if the element is odd
+    if (x % 2 == 1) {
+      oddArr.push(x);
+    }
+  });
+
+  //sort the array in decending order
+  oddArr.sort(function (a, b) { return b - a });
+}
 
 // --------------------- End Code Area --------------------
 
@@ -22,11 +51,13 @@
 // -------------------------------------------------------
 function upDownSort(arr) {
   // -------------------- Your Code Here --------------------
-
-
-
-
-
+  let finalArr = [];
+  evenSort(arr);
+  oddSort(arr);
+  finalArr = evenArr.concat(oddArr);
+  evenArr = []; //reset array to empty
+  oddArr = [];
+  return finalArr
   // --------------------- End Code Area --------------------
 }
 
