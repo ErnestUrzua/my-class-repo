@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Unique characters</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unique characters</title>
 </head>
+
 <body>
 
 
-  <script>
-    function unique(str) {
-    // ====================== YOUR WORK HERE ===================
+    <script>
+        function unique(str) {
+            // ====================== YOUR WORK HERE ==================
+            toString()
+            for (i = 0; i < str.length - 1; i++) {
+                for (j = 1; j < str.length; j++) {
+                    console.log(str[i] + ' ' + str[j])
+                    if (str[i] === str[j]) {
+                        return false
+                    }
+                }
+                return true; //string is unique
+            }
+            // =========================================================
+        }
+        console.log(unique("chicken"))
+        console.log(unique("robert"))
+        console.log(unique("ricky"))
+    </script>
 
-
-
-
-
-    // =========================================================
-    }
-    console.log(unique("chicken"))
-    console.log(unique("robert"))
-    console.log(unique("ricky"))
-  </script>
-  
 </body>
+
 </html>
