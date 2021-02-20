@@ -247,7 +247,7 @@ var isPalindrome = function(x) {
 
 };
 
-/**
+/** Leet Code Reverse String
  * @param {number} x
  * @return {number}
  */
@@ -265,6 +265,8 @@ var reverse = function(x) {
     newArr = newArr * Math.sign(x);
     pop = x % 10;
     console.log(newArr +" "+ x)
+    //if the array is less than 0x7FFFFFFF is a number in hexadecimal (2,147,483,647 in decimal) 
+    //that represents the maximum positive value for a 32-bit signed binary integer.
     if (newArr <= 0x7fffffff && newArr >= -0x80000000){
         return newArr;
     }
@@ -272,3 +274,4 @@ var reverse = function(x) {
         return 0;
     }
 };
+
